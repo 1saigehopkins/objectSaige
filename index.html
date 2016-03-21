@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Objectify Yourself</title>
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+      <script>
+
+          $(document).ready(function(){
+
+          var about = {
+              "firstName":"Saige",
+              "lastName":"Hopkins",
+              "age":"21",
+              "lastAte":"doughnuts",
+              "hometown":"Asheville"
+          };
+
+          console.log(about);
+
+          var introPP = "Hey, I'm " + about.firstName + " " + about.lastName + ". I'm " + about.age + " years old. I'm from the ever wonderful " + about.hometown + ", and the last thing I ate was " + about.lastAte + "!!!!!!! Thanks for taking the time to get to know a little bit more about me.";
+          console.log(introPP);
+
+          var funky = "";
+
+			for (var i = 0; i<about.firstName.length; i++) {
+
+				if(i === about.firstName.length - 1) {
+					//this only happens during the last item in the list
+					funky = funky + " " +about.age[i] + ".";
+				} else {
+					//this happens for every item in the list
+					funky = "I LOVE to SNACK!" + "gimme a " + funky + "gimme a " +about.lastAte[i] + ", and ";
+				}
+
+			}
+
+			$("body").append(funky)
+
+        });
+      </script>
+    </head>
+<body>
+</body>
+</html>
