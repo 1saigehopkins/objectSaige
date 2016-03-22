@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title> objectifying each other</title>
+      <title> objectifying!!</title>
       <script src="https://code.jquery.com/jquery-latest.min.js"></script>
       <script>
 
@@ -12,29 +12,16 @@
               "lastName":"Hopkins",
               "age":"21",
               "lastAte":"doughnuts",
-              "hometown":"Asheville"
+              "hometown":"Asheville",
+              "dream":[
+                    {"state":"foggy","subject":"time","setting":"kitchen"},
+                    {"state":"awake","subject":"food","setting":"desk"},
+                    {"state":"asleep","subject":"eggshells","setting":"bed"}
+              ]
           };
 
-          console.log(about);
+          $("body").append("During the night, I am surely " + about.dream[2].state + ".");
 
-          var introPP = "Hey, I'm " + about.firstName + " " + about.lastName + ". I'm " + about.age + " years old. I'm from the ever wonderful " + about.hometown + ", and the last thing I ate was " + about.lastAte + "!!!!!!! Thanks for taking the time to get to know a little bit more about me.";
-          console.log(introPP);
-
-          var funky = "";
-
-			for (var i = 0; i<about.firstName.length; i++) {
-
-				if(i === about.firstName.length - 1) {
-					//this only happens during the last item in the list
-					funky = funky + " " +about.hometown[i] + ".";
-				} else {
-					//this happens for every item in the list
-					funky = "I LOVE to SNACK!" + "gimme a " + funky + "gimme a " +about.lastAte[i] + ", and ";
-				}
-
-			}
-
-			$("body").append(funky)
 
         });
       </script>
